@@ -31,8 +31,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+<<<<<<< HEAD
     'corsheaders',
     'rest_framework',
+=======
+>>>>>>> 24b12cd8a200c0ae803212d05ea996717e194f2e
     'books_api',
     'django.contrib.admin',
     'django.contrib.auth',

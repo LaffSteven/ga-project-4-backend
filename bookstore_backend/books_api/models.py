@@ -4,6 +4,7 @@ from django.db import models
 class Book(models.Model):
     title = models.CharField(max_length=128, null=True)
     author_name = models.CharField(max_length=128, null=True)
+    price = models.FloatField(null = True)
     publisher = models.CharField(max_length=128, null=True)
     publication_date = models.DateField(null = True)
     genre = models.CharField(max_length=128, null=True)

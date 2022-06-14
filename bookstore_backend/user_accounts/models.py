@@ -10,4 +10,4 @@ class UserAccount(models.Model):
     first_name = models.CharField(max_length=32)
     last_name = models.CharField(max_length=32)
     staff = models.BooleanField()
-    cart = models.JSONField(encoder=None, null=True)
+    # cart = models.JSONField(encoder=None, null=True)

@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from rest_framework import generics
 import json
+from .models import UserAccount
+from .serializers import UserAccountSerializer
 
 
 # Create your views here.

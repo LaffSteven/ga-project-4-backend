@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'books_api',
+    'bcrypt',
     'user_accounts',
     'django.contrib.admin',
     'django.contrib.auth',

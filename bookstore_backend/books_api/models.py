@@ -21,15 +21,22 @@ class Book(models.Model):
     language = models.CharField(max_length=128, null=True)
     isbn = models.CharField(max_length=128, null=True)
     rating = models.FloatField(null = True)
-    reviews = models.ForeignKey(Review, on_delete=models.CASCADE, null=True)
+    reviews = models.ManyToManyField(Review)
 
 
 
 
-    #reviews = models.ManyToManyField(Review)
+#Many to Mant attempts:
+    
 
-    # def __str__(self):
-    #     return(self.title, self.author_name, self.price, self.publisher, self.publication_date, self.genre, self.cover_art, self.page_count, self.language, self.isbn, self.rating, self.reviews)
+
+#Working Foreign Key Field:
+    #reviews = models.ForeignKey(Review, on_delete=models.CASCADE, null=True)
+
+#reviews = models.ManyToManyField(Review)
+
+# def __str__(self):
+#     return(self.title, self.author_name, self.price, self.publisher, self.publication_date, self.genre, self.cover_art, self.page_count, self.language, self.isbn, self.rating, self.reviews)
 
 
 # #https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/

@@ -6,6 +6,8 @@ class Review(models.Model):
     user = models.CharField(max_length=32, unique=True)
 
 
+
+
 class Book(models.Model):
     title = models.CharField(max_length=128, null=True)
     author_name = models.CharField(max_length=128, null=True)
@@ -19,3 +21,17 @@ class Book(models.Model):
     isbn = models.CharField(max_length=128, null=True)
     rating = models.FloatField(null = True)
     reviews = models.ForeignKey(Review, on_delete=models.CASCADE, null=True)
+
+
+
+
+
+# #https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/
+#
+#
+# def __str__(self):
+#     return "%s %s" (self.review, self.user)
+#
+#
+# def __str__(self):
+#     return "%s %s %i %s % %s %s %i %s %s $i %" (self.)

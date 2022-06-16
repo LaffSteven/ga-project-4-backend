@@ -21,7 +21,7 @@ class Book(models.Model):
     language = models.CharField(max_length=128, null=True)
     isbn = models.CharField(max_length=128, null=True)
     rating = models.FloatField(null = True)
-    reviews = models.ForeignKey(ArrayField(Review, on_delete=models.CASCADE, null=True))
+    reviews = ArrayField(models.ForeignKey(Review, on_delete=models.CASCADE, null=True))
 
 
 

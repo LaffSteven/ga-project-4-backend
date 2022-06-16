@@ -34,7 +34,7 @@ class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
 def getBookReviews(request):
     if request.method=='GET':
         print(str(request) + " is the reuqest")
-        jsonRequest = json.loads(request.body)
+        jsonRequest = json.load(request.body)
         bookID = int(jsonRequest['bookID'])
         # if Book.objects.get(id=book.id):
         print(str(bookID) + " is the book id")

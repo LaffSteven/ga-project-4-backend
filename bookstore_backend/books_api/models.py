@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Review(models.Model):
-    review = models.TextField(Book)
+    review = models.TextField()
     user = models.CharField(max_length=32, unique=True)
 
 

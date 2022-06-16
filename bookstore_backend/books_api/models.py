@@ -4,7 +4,8 @@ from django.contrib.postgres.fields import ArrayField
 # Create your models here.
 class Review(models.Model):
     review = models.TextField()
-    user = models.CharField(max_length=32, unique=True)
+    user_id = models.IntegerField(null = True)
+    book_id = models.IntegerField(null = True)
 
     # def __str__(self):
     #     return(self.review, self.user)

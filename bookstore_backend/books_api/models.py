@@ -6,8 +6,8 @@ class Review(models.Model):
     review = models.TextField()
     user = models.CharField(max_length=32, unique=True)
 
-
-
+    # def __str__(self):
+    #     return(self.review, self.user)
 
 class Book(models.Model):
     title = models.CharField(max_length=128, null=True)
@@ -21,10 +21,13 @@ class Book(models.Model):
     language = models.CharField(max_length=128, null=True)
     isbn = models.CharField(max_length=128, null=True)
     rating = models.FloatField(null = True)
-    reviews = models.ForeignKey(ArrayField(Review, on_delete=models.CASCADE, null=True))
+    reviews = models.ManyToManyField(Review, null=True)
 
+    # 
+    # reviews = models.ForeignKey(Review, on_delete=models.CASCADE, null=True)
 
-
+    # def __str__(self):
+    #     return(self.title, self.author_name, self.price, self.publisher, self.publication_date, self.genre, self.cover_art, self.page_count, self.language, self.isbn, self.rating, self.reviews)
 
 
 # #https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/

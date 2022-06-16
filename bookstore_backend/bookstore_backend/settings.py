@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import dj_database_url
+# import dj_database_url
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -93,20 +93,20 @@ DATABASES = {
     }
 }
 
-db_from_env = dj_database_url.config(conn_max_age=600) # add this
-DATABASES['default'].update(db_from_env) # add this
-# Password validation
-# https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
-
-PASSWORD_HASHERS = (
-    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
-    'django.contrib.auth.hashers.BCryptPasswordHasher',
-    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
-    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
-    'django.contrib.auth.hashers.SHA1PasswordHasher',
-    'django.contrib.auth.hashers.MD5PasswordHasher',
-    'django.contrib.auth.hashers.CryptPasswordHasher',
-)
+# db_from_env = dj_database_url.config(conn_max_age=600) # add this
+# DATABASES['default'].update(db_from_env) # add this
+# # Password validation
+# # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
+#
+# PASSWORD_HASHERS = (
+#     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+#     'django.contrib.auth.hashers.BCryptPasswordHasher',
+#     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+#     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+#     'django.contrib.auth.hashers.SHA1PasswordHasher',
+#     'django.contrib.auth.hashers.MD5PasswordHasher',
+#     'django.contrib.auth.hashers.CryptPasswordHasher',
+# )
 
 AUTH_PASSWORD_VALIDATORS = [
     {

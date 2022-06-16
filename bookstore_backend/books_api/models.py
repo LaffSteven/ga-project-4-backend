@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 
 # Create your models here.
 class Review(models.Model):
@@ -20,7 +21,7 @@ class Book(models.Model):
     language = models.CharField(max_length=128, null=True)
     isbn = models.CharField(max_length=128, null=True)
     rating = models.FloatField(null = True)
-    reviews = models.ForeignKey(Review, on_delete=models.CASCADE, null=True)
+    reviews = ArrayField(models.ForeignKey(Review, on_delete=models.CASCADE, null=True))
 
 
 

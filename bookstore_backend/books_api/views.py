@@ -12,3 +12,15 @@ class BookList(generics.ListCreateAPIView):
 class BookDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Book.objects.all().order_by('id')
     serializer_class = BookSerializer
+
+
+from .serializers import ReviewSerializer
+from .models import Review
+
+class ReviewList(generics.ListCreateAPIView):
+    queryset = Review.objects.all().order_by('id')
+    serializer_class = ReviewSerializer
+
+class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Review.objects.all().order_by('id')
+    serializer_class = ReviewSerializer

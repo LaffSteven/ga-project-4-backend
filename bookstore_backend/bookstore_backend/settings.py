@@ -54,8 +54,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-# 'whitenoise.middleware.WhiteNoiseMiddleware',
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+'whitenoise.middleware.WhiteNoiseMiddleware',
 
 CORS_ALLOW_ALL_ORIGINS = True
 

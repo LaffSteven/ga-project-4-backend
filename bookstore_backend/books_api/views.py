@@ -31,6 +31,15 @@ class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ReviewSerializer
 
 
+
+
+
+
+
+
+
+
+
 # #Choices are: book, book_id, id, review, user_id
 # def getBookReviews(request):
 #     #print(request)

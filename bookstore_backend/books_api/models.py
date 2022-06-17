@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
+from django.contrib.postgres.fields import JSONField
 
 # Create your models here.
 class Review(models.Model):
@@ -23,7 +24,7 @@ class Book(models.Model):
     isbn = models.CharField(max_length=128, null=True)
     rating = models.FloatField(null = True)
     #reviews = models.ManyToManyField(Review)
-    reviews = jsonfield.JSONField(Review)
+    reviews = models.JSONField(Review, null = True)
 
 
         # def __str__(self):

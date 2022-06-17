@@ -47,7 +47,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -57,6 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+'whitenoise.middleware.WhiteNoiseMiddleware',
 
 ROOT_URLCONF = 'bookstore_backend.urls'
 
@@ -91,6 +91,7 @@ DATABASES = {
         'HOST': 'localhost'
     }
 }
+
 
 db_from_env = dj_database_url.config(conn_max_age=600) # add this
 DATABASES['default'].update(db_from_env) # add this

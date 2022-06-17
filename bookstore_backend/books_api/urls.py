@@ -11,4 +11,5 @@ urlpatterns = [
     path('api/books/reviews/<int:pk>', views.ReviewDetail.as_view(), name='review_detail'),
 
     path('api/books/reviews/list', views.getBookReviews, name="getBookReviews")
+
 ]

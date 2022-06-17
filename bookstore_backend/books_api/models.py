@@ -25,7 +25,8 @@ class Book(models.Model):
     rating = models.FloatField(null = True)
     #reviews = models.ManyToManyField(Review)
     #reviews = models.JSONField(Review, null = True)
-    reviews = models.ForeignKey(Review, on_delete=models.CASCADE, null = True)
+    #reviews = models.ForeignKey(Review, on_delete=models.CASCADE, null = True)
+    reviews = ArrayField(Review)
 
 
         # def __str__(self):

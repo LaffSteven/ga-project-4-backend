@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'books_api',
+    'cart',
     'user_accounts',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.postgres.fields',
 ]
 
 MIDDLEWARE = [

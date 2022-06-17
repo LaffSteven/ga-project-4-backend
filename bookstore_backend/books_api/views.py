@@ -3,6 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework import generics
 from .serializers import BookSerializer
+from .serializers import ReviewSerializer
 from .models import Book
 
 import json

@@ -9,7 +9,7 @@ class Review(models.Model):
     book_id = models.IntegerField(null = True)
 
     # def __str__(self):
-    #     return(self.review, self.user)
+    #     return(self.review, self.user_id, self.book_id)
 
 class Book(models.Model):
     title = models.CharField(max_length=128, null=True)
@@ -29,5 +29,5 @@ class Book(models.Model):
     #reviews = ArrayField(Review)
 
 
-        # def __str__(self):
-        #     return(self.title, self.author_name, self.price, self.publisher, self.publication_date, self.genre, self.cover_art, self.page_count, self.language, self.isbn, self.rating, self.reviews)
+    # def __str__(self):
+    #     return(self.title, self.author_name, self.price, self.publisher, self.publication_date, self.genre, self.cover_art, self.page_count, self.language, self.isbn, self.rating, self.reviews)

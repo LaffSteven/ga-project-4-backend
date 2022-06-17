@@ -23,8 +23,8 @@ class Book(models.Model):
     language = models.CharField(max_length=128, null=True)
     isbn = models.CharField(max_length=128, null=True)
     rating = models.FloatField(null = True)
-    #reviews = models.ManyToManyField(Review)
-    reviews = models.JSONField(Review, null = True)
+    reviews = models.ManyToManyField(Review)
+    #reviews = models.JSONField(Review, null = True)
 
 
         # def __str__(self):

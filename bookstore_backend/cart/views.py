@@ -9,3 +9,7 @@ import json
 class CartList(generics.ListCreateAPIView):
     queryset = Cart.objects.all().order_by('id')
     serializer_class = CartSerializer
+
+class CartDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Cart.objects.all().order_by('id')
+    serializer_class = CartSerializer

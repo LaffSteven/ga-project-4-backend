@@ -11,4 +11,4 @@ class UserAccount(models.Model):
     last_name = models.CharField(max_length=32)
     staff = models.BooleanField()
     # review_ids = models.JSONField(encoder=None, null=True, blank=True)
-    cart = models.JSONField(encoder=None, null=True, blank=True)
+    # cart = models.JSONField(encoder=None, null=True, blank=True)

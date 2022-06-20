@@ -5,7 +5,7 @@ from rest_framework import generics
 from .serializers import BookSerializer
 from .serializers import ReviewSerializer
 from .models import Book
-
+from .models import Review
 import json
 from django.http import JsonResponse
 
@@ -18,9 +18,6 @@ class BookDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Book.objects.all().order_by('id')
     serializer_class = BookSerializer
 
-
-from .serializers import ReviewSerializer
-from .models import Review
 
 class ReviewList(generics.ListCreateAPIView):
     queryset = Review.objects.all().order_by('id')
@@ -54,4 +51,3 @@ def getBookReviews(request):
 # if Book.objects.get(id=book.id):
 #     print(str(bookID) + " is the book id")
 # #print(Review.objects.order_by('book_id'))
-

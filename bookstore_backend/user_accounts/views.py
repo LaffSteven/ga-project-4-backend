@@ -33,8 +33,8 @@ def check_login(request):
             # print("Username: " + username + " = ok")
             user = UserAccount.objects.get(username=username)  #find user object with matching username
             print(password + " ?=? " + user.password)
-            check_password(password, user.password):
-            # if password == user.password:
+            # check_password(password, user.password):
+            if password == user.password:
                 # needed to temporarily change this to check against plain text since our app isn't storing hashed passwords
                 # we are working on the hashed password bug
                 # print("Password Match")

@@ -6,6 +6,7 @@ from django.contrib.postgres.fields import JSONField
 class Review(models.Model):
     review = models.TextField()
     user_id = models.IntegerField(null = True)
+    username = models.CharField(max_length=64, null=True, blank=True)
     book_id = models.IntegerField(null = True)
 
     # def __str__(self):

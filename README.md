@@ -26,6 +26,9 @@ Technologies:
  Fontend: https://github.com/Caroline-Duffett/ga-bookstore-frontend
 
 
-Would have been to:
+
+-- Stretch Goals
+
+Would have nice been to:
  - Have persistent shopping carts for each user
  - Been able to put more than one book of each title in the carts

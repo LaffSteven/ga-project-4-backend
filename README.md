@@ -27,8 +27,12 @@ Technologies:
 
 
 
--- Stretch Goals
+---
 
-Would have nice been to:
+---
+
+--- Stretch Goals ---
+
+Would have been nice to:
  - Have persistent shopping carts for each user
  - Been able to put more than one book of each title in the carts

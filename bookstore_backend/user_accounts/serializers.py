@@ -9,9 +9,13 @@ class UserAccountSerializer(serializers.ModelSerializer):
         fields = ('id', 'username', 'email', 'password', 'first_name', 'last_name', 'staff')
 
     ### THIS HASHES A NEW USERS PASSWORD WHEN THEY CREATE AN ACCOUNT
-    def create_user(self, validated_data):
+    def create(self, validated_data):
         user = UserAccount.objects.create(
+        username=validated_data['username'],
         email=validated_data['email'],
+        first_name=validated_data['first_name'],
+        last_name=validated_data['last_name'],
+        staff=validated_data['staff'],
         password = make_password(validated_data['password'])
         )
         user.save()

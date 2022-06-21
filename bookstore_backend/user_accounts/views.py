@@ -32,12 +32,13 @@ def check_login(request):
         if UserAccount.objects.get(username=username): #see if username exists in db
             # print("Username: " + username + " = ok")
             user = UserAccount.objects.get(username=username)  #find user object with matching username
-            # print(password + " ?=? " + user.password)
-            if (password == user.password): #check_password(password, user.password):
+            print(password + " ?=? " + user.password)
+            # check_password(password, user.password):
+            if password == user.password:
                 # needed to temporarily change this to check against plain text since our app isn't storing hashed passwords
                 # we are working on the hashed password bug
                 # print("Password Match")
-                return JsonResponse({'id': user.id, 'username': user.username}) #if passwords match, return a user dict
+                return JsonResponse({'id': user.id, 'username': user.username, 'staff':user.staff}) #if passwords match, return a user dict
             else: #passwords don't match so return empty dict
                 # print("Password Does Not Match: " + password)
                 return JsonResponse({})

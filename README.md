@@ -24,3 +24,8 @@ Technologies:
  GitHub repositories:
  Backend: https://github.com/LaffSteven/ga-project-4-backend
  Fontend: https://github.com/Caroline-Duffett/ga-bookstore-frontend
+
+
+Would have been to:
+ - Have persistent shopping carts for each user
+ - Been able to put more than one book of each title in the carts
